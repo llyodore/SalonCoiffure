@@ -1,0 +1,47 @@
+<div id="avis">
+    <h1>Laissez-nous un avis!</h1>
+
+    <form (ngSubmit)="saveAvis">
+        
+        <tr>
+            <td>Titre</td>
+            <td><input type="text" [(ngModel)]="user.titre" name="titre"/></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td><input type="text" [(ngModel)]="user.descripton" name="description"/></td>
+        </tr>
+
+        <tr>
+            <td>Utilisateur</td>
+                <td><input type="text" [(ngModel)]="user.nom" name="nom"/></td>
+                <td><input type="text" [(ngModel)]="user.prenom" name="prenom"/></td>
+                <td><input type="text" [(ngModel)]="user.libelle" name="libelle"/></td>
+        </tr>
+
+
+
+    </form>
+<div>
+    <table>
+        <tr>
+            <td>Titre</td>
+            <td>Description</td>
+            <td>Username</td>
+            <td>Password</td>
+            <td>Action</td>
+        </tr>
+        <tr *ngFor="let u of users">
+            <td>{{u.nomUtilisateur}}</td>
+            <td>{{u.prenomUtilisateur}}</td>
+            <td>{{u.username}}</td>
+            <td>{{u.password}}</td>
+            <td><button (click)="deleteUtilisateur(u.idUtilisateur)">Delete</button></td>
+        </tr>
+    </table>
+
+</div>
+    
+        
+
+</div>
